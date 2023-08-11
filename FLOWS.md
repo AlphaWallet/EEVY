@@ -92,9 +92,7 @@ This flow represents the process an event organizer follows to create an event.
 graph TB
   A[Connect Wallet & Input Email_V]
   B[Input Event Details & Deploy Event Contract]
-  C[Assign Admins & Issue EOT_se1_admin Tokens]
   A --> B
-  B --> C
 ```
 
 ### 2. Access Admin Portal:
@@ -103,7 +101,7 @@ This flow shows how an event organizer or admin accesses the admin portal.
 
 ```mermaid
 graph TB
-  A[Connect Wallet with EOT_se1_admin or EOT_se1_key_admin]
+  A[Connect Wallet with Admin Access]
   B[Access Admin Portal]
   A --> B
 ```
@@ -114,7 +112,7 @@ This flow demonstrates how event organizers or admins check in users at the even
 
 ```mermaid
 graph TB
-  A[Install AlphaWallet & Have EOT_se1_admin or EOT_se1_key_admin]
+  A[Install AlphaWallet & Have Admin Access]
   B[Scan User's QR Code]
   A --> B
 ```
@@ -130,7 +128,7 @@ graph TB
   A --> B
 ```
 
-### 5. EOT_se1_key_admin and EOT_se1_admin Recovery:
+### 5. Admin Recovery:
 
 This flow depicts the recovery process for event organizers or admins.
 
@@ -140,7 +138,7 @@ graph TB
   B[Connect New Wallet & Input Email Address_V]
   C[Claim ATTe_V from attestation.id]
   D[Make Smart Contract Call & Attach ATTe_V]
-  E[Update Ownership of EOT_se1_key_admin]
+  E[Update Admin Access]
   A --> B
   B --> C
   C --> D

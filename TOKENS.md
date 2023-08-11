@@ -4,8 +4,7 @@ Understanding the project begins with its primary components - the tokens. In ee
 
 | Token Name | Description & Use | Owner |
 |------------|------------------|-------|
-| ETT (Event Ticket NFT, ERC721/1155 and ERC5169) | Ownership of the event ticket. Tickets in this project are NFTs, catering to the crypto-savvy user base. | Ticket Holders |
-| EOT (Event Organiser NFT, ERC721/1155 and ERC5169) | Admin "keys" or ownership of the event. Only authorized event organizers can conduct events. ETTs are issued based on ATTp, signed by EOT token holders. | Event Organiser |
+| ETT (Event Ticket NFT, ERC721/1155) | Ownership of the event ticket. Tickets in this project are NFTs, catering to the crypto-savvy user base. | Ticket Holders |
 | USDC ($, ERC20) | Payment token/currency. | Ticket Buyer |
 | ATTp (Permission to Buy Ticket Attestation token) | Token-gated event access. This attestation ensures that tickets are only purchased after obtaining an ATTp from the dapp. | Ticket Buyer |
 | ATTe (Email ID Attestation token) | Proof of email ID ownership with crypto wallet. Refers to individuals who've switched wallets and wish to reassign ownership of their old NFTs. | Wallet Loser[^1] |
@@ -18,11 +17,9 @@ For clarification, all off-chain attestation tokens begin with "ATT". While we o
 
 ## NFT tokens
 
-First let's look at the 2 NFT tokens at work.
+Let's look at the NFT token at work.
 
-Both ETT and EOT don't necessarily have to be NFT tokens. However, in this project, they are. This is because our users are crypto-savvy and expect tickets to be NFTs. These 2 tokens are linked.
-
-EOT serves as an token of power. Only official events are permitted. Organizers need top-level authorization to conduct events. This is done by giving the Event Organisers EOT tokens. The smart contract issuing ETTs has a mechanism in it to ensure that an ETT can only be minted if the corresponding EOT exists.
+ETT doesn't necessarily have to be an NFT token. However, in this project, it is. This is because our users are crypto-savvy and expect tickets to be NFTs.
 
 ## Attestation Tokens
 
@@ -35,4 +32,3 @@ An ATTp is an authorization that allows an ETT to be issued to a ticket holder. 
   - Each event's ATTp can contain specific data, like price, location, and date. This flexibility allows the ATTp to store token data used later for minting ETTs, rather than forcing organizers to provide all event details to the smart contract upfront.
 
 ATTr exists because refunds aren't processed by Dapp initiating a transaction. Instead, they use another attestation, allowing the ticket holder to request a refund. This approach is chosen because event organizers' Dapp websites prefer not to hold cryptocurrency, which would be needed to cover gas fees for refunds.
-
