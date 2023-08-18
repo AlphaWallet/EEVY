@@ -1,18 +1,17 @@
-# Attestation and NFT based crypto native Event ticket platform EEVY.XYZ
+# EEVY.XYZ
 
-To prepare smart contracts and start development, first check the design in [Tokens](TOKENS.md), then [Flows](FLOWS.md). Then, for the basic functions and UX, you can copy Lu.ma.
+EEVY.XYZ is an Attestation and NFT based crypto native Event platform with two main features:
+
+- Event management
+- Crypto based ticketing
+
+The whole architecture:
+
+![architecture](./docs/architecture.png)
 
 ## Layout
 
 - contracts
 - frontend
-- api
-- dbm
-
-## Branches & CI
-
-Note: CI is for `frontend` and `api` deployment only.
-
-- dev, daily commits
-- stage, stage deployment
-- prod, prod deployment
+- cli
+- backend
